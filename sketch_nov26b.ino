@@ -6,8 +6,13 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   int i;
-  // H的摩斯密码
-  for(i=0;i<4;i++){
+string x="HELLO";
+  for(int z=0;z<x.length();z++)
+  {
+    // H的摩斯密码
+  if(x[z]=='A')
+  {
+    for(i=0;i<4;i++){
     digitalWrite(13,HIGH);
      delay(200);
     if(i==3){
@@ -17,14 +22,22 @@ void loop() {
     digitalWrite(13,LOW);
      delay(500);
     }
+   }
   }
   // E的摩斯密码
-  digitalWrite(13,HIGH);
+  if(x[z]=='E')
+  {
+    digitalWrite(13,HIGH);
     delay(200);
   digitalWrite(13,LOW);
     delay(2000);
+  }
   // L的摩斯密码
-  for(int j=0;j<2;j++){
+  if(x[z]=='L')
+  {
+    if(a[i]=='L')
+   {
+    for(int j=0;j<2;j++){
    digitalWrite(13,HIGH);
     delay(200);
   digitalWrite(13,LOW);
@@ -41,8 +54,12 @@ void loop() {
     delay(200);
   digitalWrite(13,LOW);
     delay(2000);
+   }
   }
+ }
   // O的摩斯密码
+  if(x[z]=='O')
+  {
   for(i=0;i<3;i++){
     digitalWrite(13,HIGH);
     delay(200);
@@ -57,5 +74,7 @@ void loop() {
   digitalWrite(13,LOW);
     delay(1000);
     }
+   }
+   }
   }
 }
