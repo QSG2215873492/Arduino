@@ -10,7 +10,7 @@ string x="HELLO";
   for(int z=0;z<x.length();z++)
   {
     // H的摩斯密码
-  if(x[z]=='A')
+  if(x[z]=='H')
   {
     for(i=0;i<4;i++){
     digitalWrite(13,HIGH);
@@ -23,6 +23,7 @@ string x="HELLO";
      delay(500);
     }
    }
+  Serial.println("H");
   }
   // E的摩斯密码
   if(x[z]=='E')
@@ -31,6 +32,7 @@ string x="HELLO";
     delay(200);
   digitalWrite(13,LOW);
     delay(2000);
+    Serial.println("E");
   }
   // L的摩斯密码
   if(x[z]=='L')
@@ -56,6 +58,7 @@ string x="HELLO";
     delay(2000);
    }
   }
+    Serial.println("E");
  }
   // O的摩斯密码
   if(x[z]=='O')
@@ -74,7 +77,8 @@ string x="HELLO";
   digitalWrite(13,LOW);
     delay(1000);
     }
-   }
+    }
+   Serial.println("O");
    }
   }
 }
